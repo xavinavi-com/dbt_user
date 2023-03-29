@@ -1,0 +1,14 @@
+dbt_user:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: postgres
+      dbname: postgres
+      schema: public
+
+
+     

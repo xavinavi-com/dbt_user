@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: users_per_month_year
+    description: "Cantidad de usuarios por mes y por año"
+    columns:
+      - name: year
+        description: "Año"
+        tests:
+          - not_null
+          - unique
+      - name: month
+        description: "Mes"
+        tests:
+          - not_null
+          - unique
+      - name: num_users
+        description: "Número de usuarios"
+        tests:
+          - not_null
+
+  - name: all_users
+    description: "Todos los usuarios"
+    columns:
+      - name: user_id
+        description: "ID del usuario"
+        tests:
+          - not_null
+          - unique
+      - name: user_uuid
+        description: "user_uuid del usuario"
+        tests:
+          - not_null
+      - name: first_name
+        description: "first_name del usuario"
+        tests:
+          - not_null
+
+      - name: last_name
+        description: "last_name del usuario"
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "created_at del usuario"
+        tests:
+          - not_null
+
+      - name: is_marketing_opted_in
+        description: "is_marketing_opted_in del usuario"
+        tests:
+          - not_null          
